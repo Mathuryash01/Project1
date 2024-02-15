@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+  
+    <script src="main.js"></script> 
+    <div class="grid-container">
+      <div class="section">
+        <h2 class="heading">Digital Clock</h2>
+        <div class="container" id="mainContainer">
+          <div class="ambient-light"></div>
+          <div class="text" id="timeText">00:00:00</div>
+        </div>
+      </div>
+  
+      <div class="section">
+        <h2 class="heading">Stopwatch</h2>
+        <div class="container">
+          <div class="ambient-light"></div>
+          <div class="text" id="stopwatchText" style="display: none;">00:00:00</div>
+        </div>
+        <div class="controls">
+          <button class="start-stop-button" onclick="startStopwatch()">Start</button>
+          <button class="stop-button" onclick="stopStopwatch()" style="display: none;">Stop</button>
+          <button class="reset-button" onclick="resetStopwatch()" style="display: none;">Reset</button>
+        </div>
+      </div>
+  
+      <div class="section">
+        <h2 class="heading">Alarm</h2>
+        <div class="container">
+          <div class="ambient-light"></div>
+          <div class="text" id="alarmText" style="display: none;">00:00:00</div>
+        </div>
+        <div class="controls">
+          <button class="alarm-button" onclick="setAlarm()">Set Alarm</button>
+          <button class="stop-button" onclick="stopAlarm()" id="stopAlarmButton" style="display: none;">Stop Alarm</button>
+        </div>
+      </div>
+    </div>
+  
+    <audio id="alarmSound" src="alarm.mp3"></audio>
+    
+    
+</body>
+</html>
